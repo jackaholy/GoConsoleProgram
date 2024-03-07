@@ -45,10 +45,12 @@ Allow the user to look at the scores stored in the array. Iterate through
 the list printing each entry.
 */
 func pastScore() {
+	// Check to see if there are any scores present in the array.
 	if len(scores) == 0 {
 		fmt.Println("\nThere are currently no scores entered.")
 	} else {
 		fmt.Println("Past Scores: ")
+		// Print each element in the array.
 		for i, score := range scores {
 			fmt.Printf("%d: %d\n", i+1, score)
 		}
@@ -87,6 +89,7 @@ func main() {
 			"Press [m] to see the MEAN of the scores\n" +
 			"Press [q] to QUIT the program")
 		fmt.Scan(&input1)
+		// Check the input from the user and run the appropriate function.
 		switch input1 {
 		case "n":
 			fmt.Println(newScore())
